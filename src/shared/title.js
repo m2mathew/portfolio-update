@@ -28,9 +28,9 @@ const styles = {
 
 
 const Title = () => (
-  <div className="title" style={styles.title} >
-    <h1 className="text-left" style={styles.textLeft} >Mike Mathew</h1>
-    <h3 className="text-left" style={styles.textRight} >front end web developer</h3>
+  <div className="title" style={styles.title}>
+    <h1 className="text-left" style={styles.textLeft}>Mike Mathew</h1>
+    <h3 className="text-left" style={styles.textRight}>front end web developer</h3>
   </div>
 );
 
