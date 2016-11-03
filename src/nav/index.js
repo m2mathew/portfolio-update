@@ -1,13 +1,10 @@
 import React from 'react';
 import Backbone from 'backbone';
+import $ from 'jquery';
 
-class Nav extends React.Component({
-  constructor(props) {
-    super(props);
-    this.state = links: [];
-  }
-
+class Nav extends React.Component {
   componentWillMount() {
+    console.log('hello', this.props);
     this.props.router.on('route', () => {
       this.forceUpdate();
     });
@@ -20,9 +17,9 @@ class Nav extends React.Component({
   }
 
   render() {
-    let currentPage = Backbone.history.getFragment();
+    const currentPage = Backbone.history.getFragment();
 
-    let links = [
+    const links = [
       <li
         className={currentPage === '' ? 'active nav-link' : 'nav-link'}
         key="home"
@@ -62,4 +59,6 @@ class Nav extends React.Component({
       </div>
     );
   }
-});
+}
+
+export default Nav;

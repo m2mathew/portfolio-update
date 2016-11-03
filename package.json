@@ -1,6 +1,9 @@
 {
   "name": "portfolio-mike",
-  "version": "0.1.0",
+  "description": "A curated list of applications and websites built by Michael D. Mathew",
+  "version": "2.0.0",
+  "author": "Mike Mathew",
+  "main": "index.html",
   "private": true,
   "devDependencies": {
     "react-scripts": "0.7.0"
@@ -19,5 +22,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "homepage": "https://www.mikemathew.com"
 }
