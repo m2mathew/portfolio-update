@@ -1,12 +1,18 @@
+// External dependencies
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Backbone from 'backbone';
 
-import HomeComponent from './HomeComponent';
-import NavigationComponent from './NavigationComponent';
-import ResumeComponent from './ResumeComponent';
+// Internal dependencies
+import Home from './main-content-container';
+// import Nav from './nav';
+import Resume from './resume';
 
 
+const app = document.getElementById('app');
+
+
+// Router definition
 const Router = Backbone.Router.extend({
 	routes: {
 		'': 'home',
@@ -14,14 +20,14 @@ const Router = Backbone.Router.extend({
 	},
 	home: function() {
 		ReactDOM.render(
-			<HomeComponent />, app
+			<Home />, app
 		);
 	},
 	resume: function() {
 		ReactDOM.render(
-			<ResumeComponent />, app
+			<Resume />, app
 		);
-	}
+	},
 });
 
 export default Router;

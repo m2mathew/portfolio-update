@@ -1,7 +1,10 @@
+// External dependencies
 import React from 'react';
 import Backbone from 'backbone';
 import $ from 'jquery';
 
+
+// Component definition
 class Nav extends React.Component {
   componentWillMount() {
     console.log('hello', this.props);

@@ -1,7 +1,11 @@
+// External dependencies
 import React from 'react';
+
+// Internal dependencies
 import './App.css';
-import Nav from './shared/nav';
-import Title from './shared/title';
+import Nav from './nav';
+import Title from './title';
+
 
 const App = () => (
   <main>
