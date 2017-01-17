@@ -1,17 +1,27 @@
 // External dependencies
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import React from 'react';
 
 // Internal dependencies
 import '../App.css';
 import Nav from '../nav';
 import Title from '../title';
+import theme from './theme';
 
 
+// Local variables
+const muiTheme = getMuiTheme(theme);
+
+
+// Component definition
 const App = () => (
-  <main>
-    <Nav />
-    <Title />
-  </main>
+  <MuiThemeProvider muiTheme={muiTheme}>
+    <main>
+      <Nav />
+      <Title />
+    </main>
+  </MuiThemeProvider>
 );
 
 export default App;

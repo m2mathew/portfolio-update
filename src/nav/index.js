@@ -1,6 +1,17 @@
 // External
 import React from 'react';
 import { Link } from 'react-router'
+import { Tabs, Tab } from 'material-ui/Tabs';
+import { indigo900 } from 'material-ui/styles/colors';
+import MicIcon from 'material-ui/svg-icons/av/mic';
+import LaptopMacIcon from 'material-ui/svg-icons/hardware/laptop-mac';
+
+
+// Local variables
+const tabStyle = {
+  backgroundColor: '#fff',
+  color: indigo900,
+};
 
 
 // Component definition
@@ -9,20 +20,30 @@ class Nav extends React.Component {
     const currentPage = window.location.href;
 
     const links = [
-      <li className={currentPage.endsWith('home') ? 'active nav-link' : 'nav-link'}>
+      <Tab
+        className={currentPage.endsWith('home') ? 'active nav-link' : 'nav-link'}
+        icon={<MicIcon />}
+        label="Home"
+        style={tabStyle}
+      >
         <Link to="/home">Home</Link>
-      </li>,
-      <li className={currentPage.endsWith('resume') ? 'active nav-link' : 'nav-link'}>
+      </Tab>,
+      <Tab
+        className={currentPage.endsWith('resume') ? 'active nav-link' : 'nav-link'}
+        icon={<LaptopMacIcon />}
+        label="Resume"
+        style={tabStyle}
+        >
         <Link to="/resume">Resume</Link>
-      </li>,
+      </Tab>,
     ];
 
     return (
       <div className="nav-container">
         <nav role="navigation" className="link-container">
-          <ul className="nav-link-list" id="menu">
+          <Tabs className="nav-link-list" id="menu">
             {links}
-          </ul>
+          </Tabs>
         </nav>
       </div>
     );
