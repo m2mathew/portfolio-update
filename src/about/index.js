@@ -8,11 +8,11 @@ class About extends React.Component({
      return { showModal: false };
   }
 
-  componentWillMount() {
-    $('#myModal').on('shown.bs.modal', () => {
-      $('#myInput').focus()
-    });
-  }
+  // componentWillMount() {
+  //   $('#myModal').on('shown.bs.modal', () => {
+  //     $('#myInput').focus()
+  //   });
+  // }
 
   close = () => {
     this.setState({ showModal: false });

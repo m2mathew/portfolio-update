@@ -6,12 +6,12 @@ import $ from 'jquery';
 
 // Component definition
 class Nav extends React.Component {
-  componentWillMount() {
-    console.log('hello', this.props);
-    this.props.router.on('route', () => {
-      this.forceUpdate();
-    });
-  }
+  // componentWillMount() {
+  //   console.log('hello', this.props);
+  //   this.props.router.on('route', () => {
+  //     this.forceUpdate();
+  //   });
+  // }
 
   componentDidMount() {
     $(document).ready(function(){
