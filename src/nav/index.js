@@ -1,39 +1,19 @@
 // External dependencies
 import React from 'react';
-import Backbone from 'backbone';
-import $ from 'jquery';
+import { Link } from 'react-router'
 
 
 // Component definition
 class Nav extends React.Component {
-  // componentWillMount() {
-  //   console.log('hello', this.props);
-  //   this.props.router.on('route', () => {
-  //     this.forceUpdate();
-  //   });
-  // }
-
-  componentDidMount() {
-    $(document).ready(function(){
-      $('.dropdown-toggle').dropdown();
-    })
-  }
-
   render() {
-    const currentPage = Backbone.history.getFragment();
+    const currentPage = window.location.href;
 
     const links = [
-      <li
-        className={currentPage === '' ? 'active nav-link' : 'nav-link'}
-        key="home"
-      >
-        <a href="#">home</a>
+      <li className={currentPage.endsWith('home') ? 'active nav-link' : 'nav-link'}>
+        <Link to="/home">home</Link>
       </li>,
-      <li
-        className={currentPage === 'resume' ? 'active nav-link' : 'nav-link'}
-        key="resume"
-      >
-        <a href="#resume">resume</a>
+      <li className={currentPage.endsWith('resume') ? 'active nav-link' : 'nav-link'}>
+        <Link to="/resume">Resume</Link>
       </li>,
     ];
 

@@ -1,5 +1,12 @@
 // External dependencies
 import React from 'react';
+import {
+  hashHistory,
+  IndexRoute,
+  Link,
+  Route,
+  Router,
+} from 'react-router'
 
 // Internal dependencies
 import './App.css';

@@ -1,12 +1,12 @@
 // External dependencies
 import React from 'react';
-import Modal from 'react-bootstrap';
+// import Modal from 'react-bootstrap';
 
 
-class About extends React.Component({
-  state() {
-     return { showModal: false };
-  }
+const About = () => {
+  // state() {
+  //    return { showModal: false };
+  // }
 
   // componentWillMount() {
   //   $('#myModal').on('shown.bs.modal', () => {
@@ -14,18 +14,18 @@ class About extends React.Component({
   //   });
   // }
 
-  close = () => {
-    this.setState({ showModal: false });
-  }
+  // close = () => {
+  //   this.setState({ showModal: false });
+  // }
+  //
+  // open = () => {
+  //   this.setState({ showModal: true });
+  // }
 
-  open = () => {
-    this.setState({ showModal: true });
-  }
-
-  render() {
     return (
       <div className="container about-box">
-        <div className="row text-justify">
+        words
+        {/* <div className="row text-justify">
           <h3><strong>HOW TO MAKE A FRONT END DEVELOPER NAMED MIKE
             </strong> &bull; FALL IN LOVE WITH LEARNING &bull;
              GET A TRS-80 FROM UNCLE RICKY AND LEARN TO PROGRAM IN BASIC &bull;
@@ -143,8 +143,9 @@ class About extends React.Component({
             </div>
 
             &nbsp;&bull; KEEP LEARNING AND MAKING AWESOME THINGS.</h3>
-        </div>
+        </div> */}
       </div>
     );
-  },
-});
+};
+
+export default About;
