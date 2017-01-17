@@ -1,33 +1,21 @@
-// External dependencies
+// External
 import React from 'react';
-import ReactDOM from 'react-dom';
-import Backbone from 'backbone';
+import {
+  IndexRoute,
+  Route,
+} from 'react-router'
 
-// Internal dependencies
-import Home from './main-content-container';
-// import Nav from './nav';
+// Internal
+import About from './about';
 import Resume from './resume';
-
-
-const app = document.getElementById('app');
+import Root from './root';
 
 
 // Router definition
-const Router = Backbone.Router.extend({
-	routes: {
-		'': 'home',
-		'resume': 'resume'
-	},
-	home: function() {
-		ReactDOM.render(
-			<Home />, app
-		);
-	},
-	resume: function() {
-		ReactDOM.render(
-			<Resume />, app
-		);
-	},
-});
-
-export default Router;
+export default (
+	<Route path="/" component={Root}>
+		<IndexRoute component={About} />
+		<Route path="home" component={About} />
+		<Route path="resume" component={Resume} />
+	</Route>
+);

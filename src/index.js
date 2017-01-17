@@ -1,35 +1,25 @@
-// External dependencies
+// External
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 import {
   browserHistory,
-  IndexRoute,
-  Link,
-  Route,
   Router,
 } from 'react-router'
 
-// Internal dependencies
+// Internal
 import About from './about';
-import App from './App';
 import Resume from './resume';
+import routes from './routes';
 import './index.css';
 
+// Needed for onTouchTap event handling
+injectTapEventPlugin();
 
+// Render the app to the DOM
 ReactDOM.render(
-  <Router history={browserHistory}>
-    <Route path="/" component={App}>
-      <IndexRoute component={About} />
-      <Route path="home" component={About} />
-      <Route path="resume" component={Resume} />
-    </Route>
-  </Router>,
+  <Router history={browserHistory} routes={routes} />,
   document.getElementById('root')
 );
-
-// Render the entire app
-// ReactDOM.render(
-//   <App router={r} />,
-//   document.getElementById('root')
-// );

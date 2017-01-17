@@ -1,4 +1,4 @@
-// External dependencies
+// External
 import React from 'react';
 import { Link } from 'react-router'
 
@@ -10,7 +10,7 @@ class Nav extends React.Component {
 
     const links = [
       <li className={currentPage.endsWith('home') ? 'active nav-link' : 'nav-link'}>
-        <Link to="/home">home</Link>
+        <Link to="/home">Home</Link>
       </li>,
       <li className={currentPage.endsWith('resume') ? 'active nav-link' : 'nav-link'}>
         <Link to="/resume">Resume</Link>
@@ -18,27 +18,12 @@ class Nav extends React.Component {
     ];
 
     return (
-      <div className="container-fluid">
-
-        <div className="navbar-header">
-          <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span className="sr-only">Toggle navigation</span>
-            <span className="icon-bar"></span>
-            <span className="icon-bar"></span>
-            <span className="icon-bar"></span>
-          </button>
-        </div>
-
-        <div
-          className="collapse navbar-collapse" id="bs-example-navbar-collapse-1"
-        >
-          <ul
-            className="nav navbar-nav navbar-left"
-            id="menu"
-          >
+      <div className="nav-container">
+        <nav role="navigation" className="link-container">
+          <ul className="nav-link-list" id="menu">
             {links}
           </ul>
-        </div>
+        </nav>
       </div>
     );
   }
