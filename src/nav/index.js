@@ -1,11 +1,11 @@
 // External
-import React from 'react';
+import { indigo900 } from 'material-ui/styles/colors';
 import { Link } from 'react-router'
 import { Tabs, Tab } from 'material-ui/Tabs';
-import { indigo900 } from 'material-ui/styles/colors';
-import MicIcon from 'material-ui/svg-icons/av/mic';
 import LaptopMacIcon from 'material-ui/svg-icons/hardware/laptop-mac';
-
+// import MenuIcon from 'material-ui/svg-icons/navigation/menu';
+import MicIcon from 'material-ui/svg-icons/av/mic';
+import React from 'react';
 
 // Local variables
 const tabStyle = {

@@ -1,5 +1,4 @@
 body {
-  font-family: 'Source Sans Pro', sans-serif;
 	background-color: #fff;
 	font-size: 1.8em;
 	line-height: 1.6;
@@ -10,6 +9,50 @@ body {
 
 main {
   flex: 1;
+}
+
+.style-container {
+  font-size: 24px;
+}
+
+.style-container .style-title {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-weight: 900;
+  color: #bbb;
+  padding-left: 48px;
+  font-size: 48px;
+}
+
+.style-container .color-list {
+  padding: 64px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.style-container .color-list .color-box {
+  width: 40%;
+  text-align: center;
+  padding: 24px;
+  font-weight: 300;
+}
+
+.style-container .color-list .color-1 {
+  background-color: lightcoral;
+  margin-bottom: 32px;
+}
+
+.style-container .color-list .color-2 {
+  background-color: cornflowerblue;
+  margin-bottom: 32px;
+}
+
+.style-container .color-list .color-3 {
+  background-color: darkslateblue;
+}
+
+.style-container .color-list .color-4 {
+  background-color: lightpink;
 }
 
 .nav #menu .active a {

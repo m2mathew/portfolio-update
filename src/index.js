@@ -8,8 +8,6 @@ import {
 } from 'react-router'
 
 // Internal
-import About from './about';
-import Resume from './resume';
 import routes from './routes';
 import './index.css';
 

@@ -8,6 +8,7 @@ import '../App.css';
 import Nav from '../nav';
 import Title from '../title';
 import theme from './theme';
+import StyleGuide from '../style-guide';
 
 
 // Local variables
@@ -20,6 +21,7 @@ const App = () => (
     <main>
       <Nav />
       <Title />
+      <StyleGuide />
     </main>
   </MuiThemeProvider>
 );
