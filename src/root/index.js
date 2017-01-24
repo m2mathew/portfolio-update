@@ -1,9 +1,9 @@
-// External dependencies
+// External
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import React from 'react';
 
-// Internal dependencies
+// Internal
 import '../App.css';
 import Nav from '../nav';
 import Title from '../title';

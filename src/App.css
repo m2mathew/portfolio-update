@@ -9,6 +9,14 @@ body {
 
 main {
   flex: 1;
+  justify-content: center;
+  max-width: 90%;
+}
+
+/* Style Guide */
+
+.color-scheme {
+  border: 2px solid purple;
 }
 
 .style-container {
@@ -16,8 +24,8 @@ main {
 }
 
 .style-container .style-title {
-  font-family: 'Alegreya Sans SC', sans-serif;
-  font-weight: 900;
+  font-family: 'Alegreya SC', serif;
+  font-weight: 700;
   color: #bbb;
   padding-left: 48px;
   font-size: 48px;
@@ -31,9 +39,9 @@ main {
 }
 
 .style-container .color-list .color-box {
-  width: 40%;
+  width: 42%;
   text-align: center;
-  padding: 24px;
+  padding: 32px;
   font-weight: 300;
 }
 
@@ -54,6 +62,33 @@ main {
 .style-container .color-list .color-4 {
   background-color: lightpink;
 }
+
+/* Typography */
+
+.typography {
+  border: 2px solid pink;
+  font-family: 'Alegreya SC', serif;
+}
+
+.typography .typography-title {
+  font-weight: 700;
+  color: #bbb;
+  padding-left: 48px;
+  font-size: 48px;
+}
+
+.typography .typography-list {
+  padding: 64px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.font-box.right-font {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Navigation */
 
 .nav #menu .active a {
   background-color: #fff;
